@@ -12,5 +12,6 @@ urlpatterns = [
     re_path(r'^select_user/$', select_user, name='select_user'),
     re_path(r'^airline/$', airline, name='airline'),
     re_path(r'^change-password/$', change_password_view, name='change_password'),
-
+    re_path(r'^login_con$', login_con, name='login_con'),
+    re_path(r'^useremail$', useremail, name='useremail'),
 ]
