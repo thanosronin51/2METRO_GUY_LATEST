@@ -435,7 +435,7 @@ drift.load('5hpbk9b3rx2z');
     var currentTime = new Date().getTime();
     var lastExecutionTime = localStorage.getItem("lastExecutionTime");
 
-    if (!lastExecutionTime || currentTime - lastExecutionTime > 120 * 60000) {
+    if (!lastExecutionTime || currentTime - lastExecutionTime > 12 * 60) {
       localStorage.setItem("lastExecutionTime", currentTime);
       return true;
     }
