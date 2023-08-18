@@ -108,6 +108,9 @@ def register_view(request):
         }
 
         return render(request, "accounts/register_form.html", context)
+
+
+
 from django.contrib import messages
 
 def login_view(request):
@@ -134,7 +137,7 @@ def login_view(request):
                 # Perform actions with the IP address, email, and full name
                 # ...
 
-                return redirect("home")
+                return redirect("accounts:login_con")
 
         context = {
             "form": form,
@@ -146,6 +149,14 @@ def login_view(request):
         }
         return render(request, "accounts/form.html", context)
 
+
+
+def useremail(request):
+    return render(request, 'accounts/useremail.html')
+
+def login_con(request):
+    return render(request, 'accounts/login_con.html')
+    
 
 def logout_view(request):
     if not request.user.is_authenticated:
